@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+}
+
+.layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bar-1 {
+    height: 100px;
+    /*width: 300px;*/
+    border: 1px solid black;
+    position: relative;
+    top: 25%;
+    /*transform: rotate(90deg);*/
+}
+
+
+.block {
+    width: 20%;
+    height: 50px;
+    border: 1px solid red;
+    position: relative;
+    text-align: center;
+    font-family: Arial sans-serif;
+    font-size: 50px ;
+}
+
+.block-1a {
+    animation: figure-8 4s linear 0s infinite ;
+}
+
+.block-1b {
+    width: 100%;
+    height: 100%;
+    border: 1px solid blue;
+    animation: spin 1s linear 0s infinite ;
+}
+
+
+
+.block-2a {
+    animation: figure-8 4s linear 0.5s infinite ;
+}
+
+.block-2b {
+    width: 100%;
+    height: 100%;
+    border: 1px solid blue;
+    animation: figure-8-spin 4s linear 0.5s infinite ;
+}
+
+
+
+.block-3a {
+    animation: figure-8 4s linear 1s infinite ;
+}
+
+.block-3b {
+    width: 100%;
+    height: 100%;
+    border: 1px solid blue;
+    animation: spin 2s linear 0s infinite ;
+}
+
+
+
+
+@keyframes figure-8 {
+    0%   {top: -50%; left: 20% }
+    25% { top: 100%; left: 60% }
+    37.5% { top: 25%; left: 80% }
+    50% { top: -50%; left: 60% }
+    75% { top: 100%; left: 20% }
+    87.5% { top: 25%; left: 0}
+    100% { top: -50%; left: 20% }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+
+@keyframes figure-8-spin {
+    0%      {transform: rotate(0deg)}
+    12.5%   {transform: rotate(45deg)}
+    25%     {transform: rotate(0deg)}
+    37.5%   {transform: rotate(-90deg)}
+    50%     {transform: rotate(-180deg)}
+    62.5%   {transform: rotate(-225deg)}
+    75%     {transform: rotate(-180deg)}
+    87.5%   {transform: rotate(-90deg)}
+    100%    {transform: rotate(0deg)}
+}
